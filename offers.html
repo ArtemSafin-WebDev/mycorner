@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Corner</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="includes/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/common.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/media.css">
+  <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+  <script src="includes/js/jquery.min.js"></script>
+  <script src="includes/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="includes/js/jquery-ui.js"></script>
+  <script src="includes/js/jquery.maskedinput.min.js"></script>
+  <script src="includes/js/gsap.min.js"></script>
+  <script src="includes/js/ScrollMagic.min.js"></script>
+  <script src="includes/js/animation.gsap.min.js"></script>
+  <script src="includes/js/debug.addIndicators.min.js"></script>
+  <script src="includes/js/smoothScroll.js"></script>
+  <script src="includes/js/swiper-bundle.min.js"></script>
+</head>
+<body class="loading overflow-dis">
+  <div class="loader">
+    <div class="progress"><div style="width: 0%;"></div></div>
+  </div>
+  <div class="button-menu"></div>
+  <div class="main-menu">
+    <div class="main-menu-wrap">
+      <div class="layout-menu">
+        <div class="sidebar"></div>
+        <div class="content">
+          <ul class="list-menu">
+            <li>
+              <div><a href="#">Главная</a></div>
+            </li>
+            <li class="active">
+              <div><a href="#">Модели домов</a></div>
+            </li>
+            <!-- <li><div><a href="#">Модели домов</a></div></li>
+            <li><div><a href="#">О компании</a></div></li>
+            <li><div><a href="#">Контакты</a></div></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="layout-menu">
+        <div class="sidebar">
+          <ul class="list-social">
+            <li>
+              <a href="https://vk.com/mycorner_by_unistroy" target="_blank">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.3074 16.3417C22.9501 17.8678 23.2893 18.5991 23.3422 18.6945C24.0205 19.8179 22.6004 19.9026 22.6004 19.9026L19.8661 19.945C19.8661 19.945 19.2726 20.0616 18.5095 19.5317C17.4815 18.8322 16.4959 16.9988 15.7646 17.2425C15.0121 17.4863 15.0333 19.129 15.0333 19.129C15.0333 19.129 15.0333 19.3621 14.8637 19.5423C14.673 19.7437 14.302 19.6695 14.302 19.6695H13.0833C13.0833 19.6695 10.3807 19.945 8.01737 17.4757C5.42083 14.7838 3.13163 9.4847 3.13163 9.4847C3.13163 9.4847 3.00446 9.16675 3.14223 8.98658C3.3012 8.81701 3.74633 8.81702 3.74633 8.81702H6.67141C6.67141 8.81702 6.95755 8.81701 7.13772 8.98658C7.29669 9.10316 7.39208 9.34692 7.39208 9.34692C7.39208 9.34692 7.85839 10.5233 8.49428 11.6043C9.71306 13.7133 10.2748 14.1691 10.6669 13.9465C11.3028 13.618 11.1226 10.9684 11.1226 10.9684C11.1226 10.9684 11.1332 10.004 10.8153 9.58008C10.5715 9.25154 10.1052 9.14556 9.90383 9.12436C9.73426 9.10316 10.0098 8.72163 10.3595 8.54146C10.8895 8.28711 11.8115 8.28711 12.9137 8.28711C13.7721 8.28711 14.0159 8.3507 14.3444 8.42489C15.3619 8.66864 15.0121 9.61187 15.0121 11.8587C15.0121 12.5899 14.9061 13.5862 15.4043 13.9359C15.6268 14.0843 16.1779 13.9571 17.5557 11.6361C18.1916 10.5339 18.6791 9.23034 18.6791 9.23034C18.6791 9.23034 18.7851 9.00778 18.944 8.9018C19.1136 8.81702 19.3468 8.81702 19.3468 8.81702H22.4202C22.4202 8.81702 23.3528 8.71103 23.5012 9.12436C23.6602 9.55888 23.1515 10.5869 21.8903 12.2508C19.8343 15.0063 19.6011 14.752 21.3074 16.3417Z" fill="#815A88"/></svg>
+              </a>
+            </li>
+            <!-- <li>
+              <a href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.4591 6C21.6891 6.35 20.8591 6.58 19.9991 6.69C20.8791 6.16 21.5591 5.32 21.8791 4.31C21.0491 4.81 20.1291 5.16 19.1591 5.36C18.3691 4.5 17.2591 4 15.9991 4C13.6491 4 11.7291 5.92 11.7291 8.29C11.7291 8.63 11.7691 8.96 11.8391 9.27C8.27906 9.09 5.10906 7.38 2.99906 4.79C2.62906 5.42 2.41906 6.16 2.41906 6.94C2.41906 8.43 3.16906 9.75 4.32906 10.5C3.61906 10.5 2.95906 10.3 2.37906 10C2.37906 10 2.37906 10 2.37906 10.03C2.37906 12.11 3.85906 13.85 5.81906 14.24C5.45906 14.34 5.07906 14.39 4.68906 14.39C4.41906 14.39 4.14906 14.36 3.88906 14.31C4.42906 16 5.99906 17.26 7.88906 17.29C6.42906 18.45 4.57906 19.13 2.55906 19.13C2.21906 19.13 1.87906 19.11 1.53906 19.07C3.43906 20.29 5.69906 21 8.11906 21C15.9991 21 20.3291 14.46 20.3291 8.79C20.3291 8.6 20.3291 8.42 20.3191 8.23C21.1591 7.63 21.8791 6.87 22.4591 6Z" fill="#815A88"/></svg>
+              </a>
+            </li> -->
+            <li>
+              <a href="https://www.instagram.com/mycorner_by_unistroy/" target="_blank">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.1391 2.98828H18.0415C21.4329 2.98828 24.1884 5.74379 24.1884 9.13519V18.0376C24.1884 21.429 21.4329 24.1845 18.0415 24.1845H9.1391C5.7477 24.1845 2.99219 21.429 2.99219 18.0376V9.13519C2.99219 5.74379 5.7477 2.98828 9.1391 2.98828ZM8.92713 5.1079C6.81811 5.1079 5.11181 6.8142 5.11181 8.92323V18.2496C5.11181 20.3586 6.81811 22.0649 8.92713 22.0649H18.2535C20.3625 22.0649 22.0688 20.3586 22.0688 18.2496V8.92323C22.0688 6.8142 20.3625 5.1079 18.2535 5.1079H8.92713ZM19.1543 6.69762C19.8856 6.69762 20.4791 7.29112 20.4791 8.02239C20.4791 8.75366 19.8856 9.34715 19.1543 9.34715C18.423 9.34715 17.8296 8.75366 17.8296 8.02239C17.8296 7.29112 18.423 6.69762 19.1543 6.69762ZM13.5903 8.28734C16.5154 8.28734 18.8894 10.6613 18.8894 13.5864C18.8894 16.5115 16.5154 18.8855 13.5903 18.8855C10.6652 18.8855 8.29125 16.5115 8.29125 13.5864C8.29125 10.6613 10.6652 8.28734 13.5903 8.28734ZM13.5903 10.407C11.831 10.407 10.4109 11.8271 10.4109 13.5864C10.4109 15.3457 11.831 16.7658 13.5903 16.7658C15.3496 16.7658 16.7697 15.3457 16.7697 13.5864C16.7697 11.8271 15.3496 10.407 13.5903 10.407Z" fill="#815A88"/></svg>
+              </a>
+            </li>
+            <!-- <li>
+              <a href="#">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.7505 2.98828V7.22753H16.6308C15.8996 7.22753 15.571 8.08598 15.571 8.81725V11.4668H18.7505V15.706H15.571V24.1845H11.3318V15.706H8.15234V11.4668H11.3318V7.22753C11.3318 4.88534 13.2288 2.98828 15.571 2.98828H18.7505Z" fill="#815A88"/></svg>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="content">
+          <div class="buttons">
+            <div><a class="button pink" href="#">Записаться на экскурсию</a></div>
+            <div><a class="button pink" href="#">Заказть звонок</a></div>
+            <div><a class="button icon" href="https://unistroyrf.ru" target="_blank"><img src="includes/img/logos/2.png" alt="">Сайт “Унистрой”</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feedback-button-wrap">
+    <div class="container">
+      <div class="feedback-button" onclick="openFeedback();"></div>
+    </div>
+  </div>
+  <div class="feedback">
+    <div class="wrap">
+      <div class="close"></div>
+      <div class="h1">Обратная связь</div>
+      <form>
+        <div class="title-group">Выберите тему обращения</div>
+        <div class="group group-checkbox">
+          <label>
+            <input type="radio" name="topic" checked="">
+            <div class="label-checkbox hover-circle-button">Задать вопрос</div>
+          </label>
+          <label>
+            <input type="radio" name="topic">
+            <div class="label-checkbox hover-circle-button">Заказать звонок</div>
+          </label>
+          <label>
+            <input type="radio" name="topic">
+            <div class="label-checkbox hover-circle-button">Записаться на экскурсию</div>
+          </label>
+          <label>
+            <input type="radio" name="topic">
+            <div class="label-checkbox hover-circle-button">Похвалить</div>
+          </label>
+          <label>
+            <input type="radio" name="topic">
+            <div class="label-checkbox hover-circle-button">Пожаловаться</div>
+          </label>
+        </div>
+        <div class="group">
+          <div class="layout-cell-2">
+            <div class="cell">
+              <div class="input">
+                <input type="text" data-type="text" placeholder="Ваше имя" name="">
+              </div>
+            </div>
+            <div class="cell">
+              <div class="input">
+                <input type="phone" data-type="phone" placeholder="Номер телефона" name="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="input">
+            <div class="title">Комментарий</div>
+            <textarea></textarea>
+          </div>
+        </div>
+        <div class="group">
+          <div class="layout-main">
+            <div class="content">
+              <div class="info">
+                Нажимая кнопку «Отправить» я соглашаюсь <br>с <a href="#">Пользовательским соглашением</a>
+              </div>
+            </div>
+            <div class="sidebar">
+              <div class="submit">
+                <button class="button arrow dark">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="main-back"></div>
+
+  <div class="image-viewer">
+    <div class="bg"></div>
+    <div class="wrap-container"><div class="container"><div class="close"></div></div></div>
+    <div class="wrap">
+      <div class="inside">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <main class="no-pin">
+    <section class="head pink simple">
+      <header>
+        <div class="container">
+          <div class="layout-main">
+            <div class="sidebar"></div>
+            <div class="content clear">
+              <div class="logo float-left">
+                <a href="#"><img src="includes/img/logos/1.svg" alt=""></a>
+              </div>
+              <div class="info float-right">
+                <a href="tel:+78432121285">+7 843 212-12-85</a>
+                <a href="#" class="button hover-circle" onclick="openFeedback(); return false;">Обратная связь</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="layout-main">
+          <div class="sidebar"></div>
+          <div class="content">
+            <div class="h1">Акции</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="layout-main">
+          <div class="sidebar"></div>
+          <div class="container">
+            <div class="list-items">
+              <div class="item">
+                <div class="layout-image">
+                  <div class="image-cell">
+                    <div class="image">
+                      <img src="includes/img/uploads/49.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="content-cell">
+                    <div class="title">Первоначальный взнос 5% и дом твой!</div>
+                    <p class="p-2">Уникальное в своем роде предложение, чтобы каждый смог позволить себе дом прямо сейчас! Оплатите первоначальный взнос в размере 5%, оставшуюся сумму заплатить после того, как мы построим дом! Отличное решение для тех, кто хотел брать ипотеку на построенный дом, или переехать в готовый дом, сразу после покупки.</p>
+                    <p class="p-2"><b><a href="#">Юридическая информация</a></b></p>
+                    <div class="buttons">
+                      <a href="#" class="button violet hover-circle">Получить консультацию</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="layout-image">
+                  <div class="image-cell">
+                    <div class="image">
+                      <img src="includes/img/uploads/50.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="content-cell">
+                    <div class="title">Trade-in: квартира в счет первоначального взноса!</div>
+                    <p class="p-2">Уникальное в своем роде предложение, чтобы каждый смог позволить себе дом прямо сейчас! Оплатите первоначальный взнос в размере 5%, оставшуюся сумму заплатить после того, как мы построим дом! Отличное решение для тех, кто хотел брать ипотеку на построенный дом, или переехать в готовый дом, сразу после покупки.</p>
+                    <p class="p-2"><b><a href="#">Юридическая информация</a></b></p>
+                    <div class="buttons">
+                      <a href="#" class="button violet hover-circle">Получить консультацию</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="layout-image">
+                  <div class="image-cell">
+                    <div class="image">
+                      <img src="includes/img/uploads/51.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="content-cell">
+                    <div class="title">10 000 ₽ тем, кто не откладывает на потом</div>
+                    <p class="p-2">Уникальное в своем роде предложение, чтобы каждый смог позволить себе дом прямо сейчас! Оплатите первоначальный взнос в размере 5%, оставшуюся сумму заплатить после того, как мы построим дом! Отличное решение для тех, кто хотел брать ипотеку на построенный дом, или переехать в готовый дом, сразу после покупки.</p>
+                    <p class="p-2"><b><a href="#">Юридическая информация</a></b></p>
+                    <div class="buttons">
+                      <a href="#" class="button violet hover-circle">Получить консультацию</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="layout-image">
+                  <div class="image-cell">
+                    <div class="image">
+                      <img src="includes/img/uploads/52.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="content-cell">
+                    <div class="title">Бронируй сейчас - плати потом, после того как мы построим</div>
+                    <p class="p-2">Уникальное в своем роде предложение, чтобы каждый смог позволить себе дом прямо сейчас! Оплатите первоначальный взнос в размере 5%, оставшуюся сумму заплатить после того, как мы построим дом! Отличное решение для тех, кто хотел брать ипотеку на построенный дом, или переехать в готовый дом, сразу после покупки.</p>
+                    <p class="p-2"><b><a href="#">Юридическая информация</a></b></p>
+                    <div class="buttons">
+                      <a href="#" class="button violet hover-circle">Получить консультацию</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-control slider-control">
+              <div class="slider-info">
+                <span class="a">1</span> / <span class="b">8</span>
+              </div>
+              <div class="swiper-button-prev hover-circle-button"></div>
+              <div class="swiper-button-next hover-circle-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="violet">
+      <div class="container design-wrap position-relative sidebar-previous">
+        <div class="design-image"><img class="no-back" lazy-src="includes/img/others/1.png" alt=""></div>
+        <div class="layout-main adaptive-skip">
+          <div class="sidebar">
+            <div class="page-number">08</div>
+          </div>
+          <div class="content">
+            <div class="layout-main">
+              <div class="content">
+                <div class="pre-title">Формы оплаты</div>
+                <div class="h1">Собственный дом — это просто</div>
+              </div>
+              <div class="sidebar sidebar-shift">
+                <div class="scroll-from-right">
+                <div class="pre-title"><div class="br"></div></div>
+                <h3><b>Легкая покупка</b></h3>
+                <p class="p-1">Вы можете купить дом онлайн с помощью вашей банковской карты.<br>
+                <br></p>
+                </div>
+                <div class="scroll-from-right">
+                <h3><b>Помощь юристов</b></h3>
+                <p class="p-1">Наши юристы подготовят все необходимые документы для разрешения на строительство<br>
+                <br></p>
+                </div>
+                <div class="scroll-from-right">
+                <h3><b>Одно окно</b></h3>
+                <p class="p-1">Обеспечим коммуникации, решим юридические, строительные и прочие вопросы в режиме одного окна</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container sidebar-previous">
+        <div class="layout-main adaptive-skip">
+          <div class="sidebar"><div class="page-number">09</div></div>
+          <div class="content">
+            <div class="layout-main">
+              <div class="content">
+                <div class="pre-title">Попробуйте сами</div>
+                <div class="h1">Хотите посмотреть своими глазами? </div>
+              </div>
+              <div class="sidebar sidebar-shift">
+                <p class="p-1">Оставьте контакты и мы пригласим вас на экскурсию — покажем ход строительства и ответим на все вопросы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout-main">
+          <div class="sidebar"></div>
+          <div class="content">
+            <div class="layout-main">
+              <div class="content">
+                <hr>
+                <h2><a href="tel:+78432121285">+7 843 212-12-85</a></h2>
+                <p><a href="mailto:info@mycorner.ru">info@mycorner.ru</a></p>
+                <h2>г. Казань, Н. Ершова, 76/1</h2>
+                <p class="p-2">
+                  В Будни: с 09:00 до 19:00 <br>
+                  Суббота: экскурсионный день <br>
+                  Воскресенье: выходной день
+                </p>
+                <ul class="social">
+                  <li>
+                    <a href="https://www.instagram.com/mycorner_by_unistroy/" target="_blank"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.1391 2.98828H18.0415C21.4329 2.98828 24.1884 5.74379 24.1884 9.13519V18.0376C24.1884 21.429 21.4329 24.1845 18.0415 24.1845H9.1391C5.7477 24.1845 2.99219 21.429 2.99219 18.0376V9.13519C2.99219 5.74379 5.7477 2.98828 9.1391 2.98828ZM8.92713 5.1079C6.81811 5.1079 5.11181 6.8142 5.11181 8.92323V18.2496C5.11181 20.3586 6.81811 22.0649 8.92713 22.0649H18.2535C20.3625 22.0649 22.0688 20.3586 22.0688 18.2496V8.92323C22.0688 6.8142 20.3625 5.1079 18.2535 5.1079H8.92713ZM19.1543 6.69762C19.8856 6.69762 20.4791 7.29112 20.4791 8.02239C20.4791 8.75366 19.8856 9.34715 19.1543 9.34715C18.423 9.34715 17.8296 8.75366 17.8296 8.02239C17.8296 7.29112 18.423 6.69762 19.1543 6.69762ZM13.5903 8.28734C16.5154 8.28734 18.8894 10.6613 18.8894 13.5864C18.8894 16.5115 16.5154 18.8855 13.5903 18.8855C10.6652 18.8855 8.29125 16.5115 8.29125 13.5864C8.29125 10.6613 10.6652 8.28734 13.5903 8.28734ZM13.5903 10.407C11.831 10.407 10.4109 11.8271 10.4109 13.5864C10.4109 15.3457 11.831 16.7658 13.5903 16.7658C15.3496 16.7658 16.7697 15.3457 16.7697 13.5864C16.7697 11.8271 15.3496 10.407 13.5903 10.407Z" fill="#ECE3E9"/></svg></a>
+                  </li>
+                  <!-- <li>
+                    <a href="#"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.7505 2.98828V7.22753H16.6308C15.8996 7.22753 15.571 8.08598 15.571 8.81725V11.4668H18.7505V15.706H15.571V24.1845H11.3318V15.706H8.15234V11.4668H11.3318V7.22753C11.3318 4.88534 13.2288 2.98828 15.571 2.98828H18.7505Z" fill="#ECE3E9"/></svg></a>
+                  </li> -->
+                  <li>
+                    <a href="https://vk.com/mycorner_by_unistroy" target="_blank"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.3074 16.3417C22.9501 17.8678 23.2893 18.5991 23.3422 18.6945C24.0205 19.8179 22.6004 19.9026 22.6004 19.9026L19.8661 19.945C19.8661 19.945 19.2726 20.0616 18.5095 19.5317C17.4815 18.8322 16.4959 16.9988 15.7646 17.2425C15.0121 17.4863 15.0333 19.129 15.0333 19.129C15.0333 19.129 15.0333 19.3621 14.8637 19.5423C14.673 19.7437 14.302 19.6695 14.302 19.6695H13.0833C13.0833 19.6695 10.3807 19.945 8.01737 17.4757C5.42083 14.7838 3.13163 9.4847 3.13163 9.4847C3.13163 9.4847 3.00446 9.16675 3.14223 8.98658C3.3012 8.81701 3.74633 8.81702 3.74633 8.81702H6.67141C6.67141 8.81702 6.95755 8.81701 7.13772 8.98658C7.29669 9.10316 7.39208 9.34692 7.39208 9.34692C7.39208 9.34692 7.85839 10.5233 8.49428 11.6043C9.71306 13.7133 10.2748 14.1691 10.6669 13.9465C11.3028 13.618 11.1226 10.9684 11.1226 10.9684C11.1226 10.9684 11.1332 10.004 10.8153 9.58008C10.5715 9.25154 10.1052 9.14556 9.90383 9.12436C9.73426 9.10316 10.0098 8.72163 10.3595 8.54146C10.8895 8.28711 11.8115 8.28711 12.9137 8.28711C13.7721 8.28711 14.0159 8.3507 14.3444 8.42489C15.3619 8.66864 15.0121 9.61187 15.0121 11.8587C15.0121 12.5899 14.9061 13.5862 15.4043 13.9359C15.6268 14.0843 16.1779 13.9571 17.5557 11.6361C18.1916 10.5339 18.6791 9.23034 18.6791 9.23034C18.6791 9.23034 18.7851 9.00778 18.944 8.9018C19.1136 8.81702 19.3468 8.81702 19.3468 8.81702H22.4202C22.4202 8.81702 23.3528 8.71103 23.5012 9.12436C23.6602 9.55888 23.1515 10.5869 21.8903 12.2508C19.8343 15.0063 19.6011 14.752 21.3074 16.3417Z" fill="#ECE3E9"/></svg></a>
+                  </li>
+                  <!-- <li>
+                    <a href="#"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3586 14.3707C19.0619 13.7666 18.2246 13.2579 17.1118 14.1163C15.5963 15.3245 13.1799 15.3245 13.1799 15.3245C13.1799 15.3245 10.7636 15.3245 9.24804 14.1163C8.13523 13.2579 7.29798 13.7666 7.00124 14.3707C6.47133 15.4305 7.06482 15.9498 8.41079 16.8082C9.56598 17.5501 11.1451 17.8256 12.1625 17.9316L11.3147 18.7795C10.1065 19.9771 8.94069 21.1323 8.14583 21.9377C7.66892 22.4252 7.66892 23.1989 8.14583 23.6546L8.29421 23.8242C8.77112 24.3011 9.55538 24.3011 10.0323 23.8242L13.1799 20.6659C14.3987 21.8635 15.5539 23.0187 16.3594 23.8242C16.8363 24.3011 17.61 24.3011 18.0975 23.8242L18.2352 23.6546C18.7228 23.1989 18.7228 22.4252 18.2352 21.9377L15.077 18.7795L14.2398 17.921C15.2466 17.8256 16.8045 17.5395 17.9491 16.8082C19.2951 15.9498 19.8885 15.4305 19.3586 14.3707ZM13.1799 5.712C14.6425 5.712 15.8295 6.89899 15.8295 8.35093C15.8295 9.81347 14.6425 10.9899 13.1799 10.9899C11.7174 10.9899 10.5304 9.81347 10.5304 8.35093C10.5304 6.89899 11.7174 5.712 13.1799 5.712ZM13.1799 13.7136C16.1474 13.7136 18.5426 11.3184 18.5426 8.35093C18.5426 5.39405 16.1474 2.98828 13.1799 2.98828C10.2125 2.98828 7.81729 5.39405 7.81729 8.35093C7.81729 11.3184 10.2125 13.7136 13.1799 13.7136Z" fill="#ECE3E9"/></svg></a>
+                  </li> -->
+                </ul>
+                <div class="mob">
+                  <form class="white">
+                    <h3><b>Записаться на экскурсию</b></h3>
+                    <div class="input">
+                      <input type="text" data-type="text" placeholder="Ваше имя" name="">
+                    </div>
+                    <div class="input">
+                      <input type="phone" data-type="phone" placeholder="Номер телефона" name="">
+                    </div>
+                    <div class="input">
+                      <input type="text" data-type="email" placeholder="Электронная почта" name="">
+                    </div>
+                    <div class="info">
+                      Нажимая кнопку «Отправить» я соглашаюсь <br>с <a href="#">Пользовательским соглашением</a>
+                    </div>
+                    <div class="submit">
+                      <button class="button arrow dark">Отправить</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="layout-cell-2">
+                  <div class="cell">
+                    <p class="p-2 info">
+                      © My Corner, 2020
+                      <br>
+                      <a href="#">Пользовательское соглашение</a>
+                    </p>
+                  </div>
+                  <div class="cell">
+                    <a class="button icon" href="https://unistroyrf.ru" target="_blank"><img src="includes/img/logos/2.png" alt="">Сайт “Унистрой”</a>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar mob-no">
+                <form class="white">
+                  <h3><b>Записаться на экскурсию</b></h3>
+                  <div class="input">
+                    <input type="text" data-type="text" placeholder="Ваше имя" name="">
+                  </div>
+                  <div class="input">
+                    <input type="phone" data-type="phone" placeholder="Номер телефона" name="">
+                  </div>
+                  <div class="input">
+                    <input type="text" data-type="email" placeholder="Электронная почта" name="">
+                  </div>
+                  <div class="info">
+                    Нажимая кнопку «Отправить» я соглашаюсь <br>с <a href="#">Пользовательским соглашением</a>
+                  </div>
+                  <div class="submit">
+                    <button class="button arrow hover-circle dark">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="includes/js/common.js"></script>
+</body>
+</html>
